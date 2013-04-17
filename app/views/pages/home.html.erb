@@ -1,18 +1,18 @@
-<% if current_user == pin.user %>
+<% if user_signed_in? %>
 	<h1> You're logged in.  What-up? </h1>
 <% else %>
-<div class = "hero-unit">
-	<h1>WELCOME TO ONE MONTH RAILS</h1>
-	<p>What's going on?? this is rails, yo!</p>
-		
-	<p>You've found the
-		<%= link_to "One Month Rails", "http://onemonthrails.com"  %>
-		application
-	</p>
+	<div class = "hero-unit">
+		<h1>WELCOME TO ONE MONTH RAILS</h1>
+		<p>What's going on?? this is rails, yo!</p>
+			
+		<p>You've found the
+			<%= link_to "One Month Rails", "http://onemonthrails.com"  %>
+			application
+		</p>
 
-	<p>
-		<%= link_to "Sign up Now", new_user_registration_path, class: "btn btn-primary large" %>
-	</p>
-</div>
+		<p>
+			<%= link_to "Sign up Now", new_user_registration_path, class: "btn btn-primary large" %>
+		</p>
+	</div>
 
 <% end %>
