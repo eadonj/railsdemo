@@ -1,4 +1,6 @@
-
+<% if current_user == pin.user %>
+	<h1> You're logged in.  What-up? </h1>
+<% else %>
 <div class = "hero-unit">
 	<h1>WELCOME TO ONE MONTH RAILS</h1>
 	<p>What's going on?? this is rails, yo!</p>
@@ -12,3 +14,5 @@
 		<%= link_to "Sign up Now", new_user_registration_path, class: "btn btn-primary large" %>
 	</p>
 </div>
+
+<% end %>
